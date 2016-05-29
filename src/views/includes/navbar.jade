@@ -13,43 +13,19 @@ nav.navbar.navbar-default
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav
         li.active
-          a(href='#')
-            | Link 
-            span.sr-only (current)
+          a(onclick="scrollToTarget('#Sound_waves')")
+            | Onde sonore
         li
-          a(href='#') Link
+          a(onclick="scrollToTarget('#Sound')") Suono
         li.dropdown
           a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-            | Dropdown 
+            | Digitalizzazione 
             span.caret
           ul.dropdown-menu
             li
-              a(href='#') Action
+              a(onclick="scrollToTarget('#Recording')") Registrazione
             li
-              a(href='#') Another action
-            li
-              a(href='#') Something else here
+              a(onclick="scrollToTarget('#Sampling')") Sampling
             li.divider(role='separator')
             li
-              a(href='#') Separated link
-            li.divider(role='separator')
-            li
-              a(href='#') One more separated link
-      
-      ul.nav.navbar-nav.navbar-right
-        li
-          a(href='#') Link
-        li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-            | Dropdown 
-            span.caret
-          ul.dropdown-menu
-            li
-              a(href='#') Action
-            li
-              a(href='#') Another action
-            li
-              a(href='#') Something else here
-            li.divider(role='separator')
-            li
-              a(href='#') Separated link
+              a(onclick="scrollToTarget('#Reproducing')") Riproduzione
