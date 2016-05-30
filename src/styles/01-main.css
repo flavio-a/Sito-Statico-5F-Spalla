@@ -9,3 +9,23 @@
 .in-container {
   max-width: 100%;
 }
+
+.no-border {
+  border-style: hidden;
+}
+
+.tc-black {
+  color: #000;
+}
+
+.bgc-none {
+  background: none;
+}
+
+.pull-center {
+  margin: auto;
+}
+
+.inline-block {
+  display: inline-block;
+}

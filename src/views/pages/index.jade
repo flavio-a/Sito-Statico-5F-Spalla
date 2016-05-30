@@ -14,6 +14,19 @@ block content
           p.text-center.mg-lg Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies leo in libero pharetra, a varius urna ullamcorper.
             | mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
             | quis enim.
+          .text-center
+            button.no-border.bgc-none(type="button" data-toggle="modal" data-target="#FormulaOnda") Formula d'onda
+
+          //Modal
+          .modal.fade#FormulaOnda(role="dialog")
+            .modal-dialog
+              .modal-content.tc-black
+                .modal-header
+                  button.close(type="button" data-dismiss="modal") &times;
+                .modal-body
+                  p Some formulas here.
+                .modal-footer
+                  button.btn.btn-default(type="button" data-dismiss="modal") Close
 
   .bloc.bgc-white.l-bloc#Sound
     .container.bloc-xl
@@ -21,7 +34,7 @@ block content
         .col-sm-12
           h3.text-center.mg-lg SUONO
             span(data-typer-targets="WEB DESIGN,WEB DEVELOPMENT,PROMOTION")
-          p.text-center Il suono è un'onda caratterizzata da un andamento periodico.
+          p.text-center Il suono è un'onda sonora caratterizzata da un andamento periodico.
           p.text-center Un andamento periodico non significa che a livello macroscopico il suono si ripete, ma che si ripete a livello microscopico dopo un tempo T=1/f, detto periodo dell'onda.
           p.text-center.mg-lg Ci sono tre elementi che caratterizzano un suono:
       .row
@@ -34,36 +47,48 @@ block content
         .col-sm-4
           h3.text-center.mg-md Timbro
           p.text-center Il timbro è dato dalla forma dell'onda sonora per la durata di un periodo e determina la differenza tra due suoni emessi da strumenti diversi.
-          img(src="images/timbro.png").in-container
+          button.no-border(type="button" data-toggle="modal" data-target="#ModalTimbro")
+            img(src="images/timbro.png").in-container
+
+          //Modal
+          .modal.fade#ModalTimbro(role="dialog")
+            .modal-dialog
+              img(src="images/timbro.png").in-container
+              //Ex contenuto
+                .modal-content
+                  .modal-header
+                    button.close(type="button" data-dismiss="modal") &times;
+                    h4.modal-title Modal Header
+                  .modal-body
+                    p Some text in the modal.
+                  .modal-footer
+                    button.btn.btn-default(type="button" data-dismiss="modal") Close
 
   .bloc.d-bloc.bgc-outer-space#DigitalList
     .container.bloc-lg
       .row
         .col-sm-12
           h3.text-center.mg-lg DIGITALIZZAZIONE
+          p.text-center La digitalizzazione di un suono avviene in tre fasi:
       .row
         .col-sm-4
           .text-center
             a(onclick="scrollToTarget('#Recording')")
-              img(src="images/Mic-icon.png").icon-xl
+              img(src="images/mic-icon.png").icon-xl
           h3.text-center.mg-md Registrazione
           p.text-center A little feature description could go here. A little feature description.
         .col-sm-4
           .text-center
             a(onclick="scrollToTarget('#Sampling')")
-              img(src="images/Sampling-icon.png").icon-xl
+              img(src="images/sampling-icon.png").icon-xl
           h3.text-center.mg-md Sampling
           p.text-center A little feature description could go here. A little feature description.
         .col-sm-4
           .text-center
             a(onclick="scrollToTarget('#Reproducing')")
-              img(src="images/Reproducing-icon.png").icon-xl
+              img(src="images/speaker.png").icon-xl
           h3.text-center.mg-md Riproduzione
           p.text-center A little feature description could go here. A little feature description.
-  
-
-  div(style="height: 1000px;") ciao
-  #porfolio cose
 
   a.bloc-button.btn.btn-d.scrollToTop(onclick="scrollToTarget('1')")
     //inserire l'immagine della freccia
