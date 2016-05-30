@@ -21,11 +21,12 @@ block content
           .modal.fade#FormulaOnda(role="dialog")
             .modal-dialog
               .modal-content.tc-black
-                .modal-header
-                  button.close(type="button" data-dismiss="modal") &times;
+                //.modal-header
                 .modal-body
+                  div &nbsp;
+                    button.close(type="button" data-dismiss="modal") &times;
                   p Some formulas here.
-                .modal-footer
+                //.modal-footer
                   button.btn.btn-default(type="button" data-dismiss="modal") Close
 
   .bloc.bgc-white.l-bloc#Sound
@@ -33,7 +34,6 @@ block content
       .row
         .col-sm-12
           h3.text-center.mg-lg SUONO
-            span(data-typer-targets="WEB DESIGN,WEB DEVELOPMENT,PROMOTION")
           p.text-center Il suono è un'onda sonora caratterizzata da un andamento periodico.
           p.text-center Un andamento periodico non significa che a livello macroscopico il suono si ripete, ma che si ripete a livello microscopico dopo un tempo T=1/f, detto periodo dell'onda.
           p.text-center.mg-lg Ci sono tre elementi che caratterizzano un suono:
@@ -54,15 +54,6 @@ block content
           .modal.fade#ModalTimbro(role="dialog")
             .modal-dialog
               img(src="images/timbro.png").in-container
-              //Ex contenuto
-                .modal-content
-                  .modal-header
-                    button.close(type="button" data-dismiss="modal") &times;
-                    h4.modal-title Modal Header
-                  .modal-body
-                    p Some text in the modal.
-                  .modal-footer
-                    button.btn.btn-default(type="button" data-dismiss="modal") Close
 
   .bloc.d-bloc.bgc-outer-space#DigitalList
     .container.bloc-lg
@@ -74,21 +65,66 @@ block content
         .col-sm-4
           .text-center
             a(onclick="scrollToTarget('#Recording')")
-              img(src="images/mic-icon.png").icon-xl
+              img(src="images/mic-icon.png").icon-xl.in-container
           h3.text-center.mg-md Registrazione
-          p.text-center A little feature description could go here. A little feature description.
+          p.text-center A little feature description could go here.
         .col-sm-4
           .text-center
             a(onclick="scrollToTarget('#Sampling')")
-              img(src="images/sampling-icon.png").icon-xl
-          h3.text-center.mg-md Sampling
-          p.text-center A little feature description could go here. A little feature description.
+              img(src="images/sampling-icon.png").icon-xl.in-container
+          h3.text-center.mg-md Campionamento
+          p.text-center A little feature description could go here.
         .col-sm-4
           .text-center
-            a(onclick="scrollToTarget('#Reproducing')")
-              img(src="images/speaker.png").icon-xl
-          h3.text-center.mg-md Riproduzione
-          p.text-center A little feature description could go here. A little feature description.
+            a(onclick="scrollToTarget('#Reconstruction')")
+              img(src="images/speaker.png").icon-xl.in-container
+          h3.text-center.mg-md Ricostruzione
+          p.text-center A little feature description could go here.
+
+  .bloc.bgc-white.l-bloc#Recording
+    .container.bloc-xl
+      .row
+        .col-sm-12
+          h3.text-center.mg-lg REGISTRAZIONE
+          p.text-center La registrazione avviene tramite microfoni. I microfoni trasformano l'energia da una forma ad un'altra, nello specifico energia meccanica (delle onde sonore) in energia elettrica (il segnale elettrico che viene ricevuto da un altoparlante o da un convertitore #[span.explain(title="Analog-to-Digital Converter") ADC] per essere poi registrato su supporto digitale) tramite il fenomeno dell'induzione elettromagnetica, secondo la legge di Farady-Neumann-Lenz
+          .text-center
+            img(src="images/mic-dynamic.png").in-container
+          p.text-center Fai finta che questa sia una descrizione dell'immagine.
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim eros vel odio fermentum, ut luctus est consectetur. Proin volutpat scelerisque enim, id venenatis metus elementum vel. Nunc vel accumsan eros. Aenean eleifend diam ut felis congue dignissim. Donec nisl eros, suscipit ac neque sit amet, laoreet rutrum lacus. Nullam eget pretium nulla. Fusce a nibh eu ligula viverra maximus vel sit amet metus. Quisque eu est mauris. Curabitur pretium est vel ante eleifend sodales. Nullam et eros condimentum, tristique sem ut, mollis erat. Aliquam vulputate risus tincidunt, tincidunt purus in, placerat purus. Aenean nec mi enim. Morbi eu orci cursus, tristique magna nec, imperdiet ex. Curabitur viverra sem nisi, ac finibus ante dictum ut.
+
+  .bloc.d-bloc.bgc-outer-space#Sampling
+    .container.bloc-lg
+      .row
+        .col-sm-12
+          h3.text-center.mg-lg CAMPIONAMENTO
+          p.text-center Cose molto intelligenti qui. Magari con qualche formulone matematico che i commissari non capiscono.
+          p.text-center Formulone/i magggico/i
+          .text-center.mg-md
+            img(src="images/sampling.png")
+          p.text-center Altra descrizione della foto. Che fa pure riferimento al/i formulone/i maggico/i
+          p.text-center Curiosità (che in realtà è uno dei punti focali della mia tesina, ma questi sono dettagli. Non ho tempo di scrivere dei contenuti decenti per oggi): si riescono a ricostruire perfettamente tutte le frequenze minori di f_s/2, dove f_s è la frequenza di campionamento.
+          p.text-center Nulla nec quam pharetra, suscipit nisl vitae, tempus velit. Sed vitae turpis non libero molestie interdum. Mauris ac sollicitudin ante. Curabitur egestas venenatis faucibus. Praesent consequat, quam laoreet accumsan pulvinar, ipsum turpis laoreet enim, at congue tortor lorem ac metus. Aenean porttitor metus sit amet massa lobortis faucibus. Duis varius mattis velit sed sagittis. Nullam nec nisl porttitor, volutpat sem eget, lobortis metus. Integer at dapibus lectus. Phasellus pretium odio et pharetra lacinia. Pellentesque eu nisl ornare, auctor mi at, egestas quam. Ut finibus et nisl eu convallis. Aenean accumsan ligula scelerisque nunc ultrices, consectetur iaculis lorem porta. Curabitur porttitor augue eget leo convallis tincidunt. 
+
+  .bloc.bgc-white.l-bloc#Reconstruction
+    .container.bloc-xl
+      .row
+        .col-sm-12
+          h3.text-center.mg-lg RICOSTRUZIONE
+          p.text-center Teoricamente, una ricostruzione perfetta si può ottenere sommando le funzioni sinc centrate nei punti di campionamento e normalizzate al velore in quel punto (interpolazione che è garantita essere perfetta dal teorema del campionamento di Nyquist–Shannon).
+          .text-center.mg-md
+            img(src="images/sinc-function.png").in-container
+            p.text-center Grafico della funzione sinc, definita come sin(x)/x (versione non normalizzata) o come \frac{sin(\pi x)}{\pi x}
+          p Un metodo matematicamente equivalente è la convoluzione di una funzione sinc con una serie di Delta di Dirac normalizzate e allineate ai valori campionati.
+          p Nessuno di questi due metodi viene però utilizzato perché, anche se garantirebbe una riscostruzione perfetta di un segnale che campionato ricreerebbe la stessa serie di valori passati, è troppo dispendiosa a livello di calcoli da eseguire. Perciò viene utilizzata un'approssimazione con una funzione #[span.explain(title="Zero-order hold") ZOH] basata sui valori campionati, poi passata attraverso un "#[span.explain(title="filtro che ''fa passare'' solo le frequenze più basse") low-pass filter]" (chiamato anche "anti-imaging filter") per eliminare le frequenze troppo alte non volute
+          .grid.text-center.mg-md
+            .grid-row
+              .grid-cell
+                img(src="images/Zero-order_hold-analog.png").in-container
+              .grid-cell
+                img(src="images/Zero-order_hold.png").in-container
+            .grid-row
+              .grid-cell Funzione originale con campionature
+              .grid-cell Zero-order hold
 
   a.bloc-button.btn.btn-d.scrollToTop(onclick="scrollToTarget('1')")
     //inserire l'immagine della freccia

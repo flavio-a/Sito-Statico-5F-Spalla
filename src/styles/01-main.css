@@ -22,10 +22,27 @@
   background: none;
 }
 
-.pull-center {
-  margin: auto;
+.explain[title] {
+  cursor: help;
+  text-decoration: underline dotted;
 }
 
-.inline-block {
-  display: inline-block;
+footer {
+  background-color: #222;
+  color: #ddd;
+  padding-top: 6px;
+}
+
+
+/*
+ Grid system
+ ------------------------ */
+.grid {
+  display: table;
+}
+.grid-row {
+  display: table-row;
+}
+.grid-cell {
+  display: table-cell;
 }
