@@ -137,10 +137,17 @@ a,button{outline: none;} /* Prevent ugly blue glow on chrome and safari */
   opacity: 0;
   z-index: 500;
   transition: all .3s ease-in-out;
+  background: gray;
+  display: flex;
 }
+
 .scrollToTop span{
-  margin-top: 6px;
+  margin: auto;
+  color: white;
+  width: 100%;
+  text-align: center;
 }
+
 .showScrollTop{
   font-size: 14px;
   opacity: 1;
