@@ -9,16 +9,25 @@ block content
       .row
         .col-sm-12
           h3.text-center.mg-lg.tc-white ONDE SONORE
-          p.text-center Le onde sonore sono un tipo di onde meccaniche che si propagano in aria.
-          p.text-center Le onde sonore si distinguono in suoni e rumori: i primi hanno un andamento periodico, i secondi no.
-          p.text-center.mg-lg Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies leo in libero pharetra, a varius urna ullamcorper.
-            | mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-            | quis enim.
+          p.text-center Le onde sonore sono onde meccaniche longitudinali.
           .text-center
+            button.no-border.bgc-none(type="button" data-toggle="modal" data-target="#VideoGrano") Esempio di onda
+          .space-bottom &nbsp;
+          p.text-center Le onde sonore si distinguono in suoni e rumori: i primi hanno un andamento periodico, i secondi no.
+          //-.text-center
             button.no-border.bgc-none(type="button" data-toggle="modal" data-target="#FormulaOnda") Formula d'onda
 
-          //Modal
-          .modal.fade#FormulaOnda(role="dialog")
+          .modal.fade#VideoGrano(role="dialog")
+            .modal-dialog
+              .modal-content.tc-black
+                .modal-body
+                  .space-bottom &nbsp;
+                    button.close(type="button" data-dismiss="modal") &times;
+                  video(controls).in-container
+                    source(src="video/corn-wave.mp4" type="video/mp4")
+
+          //- Modal formula d'onda
+          //-.modal.fade#FormulaOnda(role="dialog")
             .modal-dialog
               .modal-content.tc-black
                 //.modal-header
@@ -35,24 +44,23 @@ block content
         .col-sm-12
           h3.text-center.mg-lg SUONO
           p.text-center Il suono è un'onda sonora caratterizzata da un andamento periodico.
-          p.text-center Un andamento periodico non significa che a livello macroscopico il suono si ripete, ma che si ripete a livello microscopico dopo un tempo T=1/f, detto periodo dell'onda.
+          p.text-center Un andamento periodico non significa che a livello macroscopico il suono si ripete, ma che si ripete a livello microscopico dopo un certo intervallo tempo, detto periodo dell'onda.
           p.text-center.mg-lg Ci sono tre elementi che caratterizzano un suono:
       .row
         .col-sm-4
           h3.text-center.mg-md Frequenza
-          p.text-center La frequenza determina la "nota" a cui corrisponde un suono e dipende dalle caratteristiche dell'emettitore del suono.
+          p.text-center La frequenza determina la nota a cui corrisponde un suono. È l'inverso del periodo.
         .col-sm-4
-          h3.text-center.mg-md Intensità
-          p.text-center L'intensità determina il "volume" del suono ed è data dall'ampiezza delle onde sonore.
+          h3.text-center.mg-md Ampiezza
+          p.text-center L'ampiezza dell'onda determina l'intensità, cioè il volume, del suono.
         .col-sm-4
-          h3.text-center.mg-md Timbro
-          p.text-center Il timbro è dato dalla forma dell'onda sonora per la durata di un periodo e determina la differenza tra due suoni emessi da strumenti diversi.
-          button.no-border(type="button" data-toggle="modal" data-target="#ModalTimbro")
-            img(src="images/timbro.png").in-container
+          h3.text-center.mg-md Forma dell'onda
+          button.no-border.bgc-none(type="button" data-toggle="modal" data-target="#ModalTimbro")
+            p.text-center La forma dell'onda sonora per la durata di un periodo determina il timbro del suono. Il timbro è il particolare carattere distintivo di un suono emesso da una particolare voce o strumento musicale.
 
           //Modal
           .modal.fade#ModalTimbro(role="dialog")
-            .modal-dialog
+            .modal-dialog.text-center
               img(src="images/timbro.png").in-container
 
   .bloc.d-bloc.bgc-outer-space#DigitalList
@@ -67,55 +75,78 @@ block content
             a(onclick="scrollToTarget('#Recording')")
               img(src="images/mic-icon.png").icon-xl.in-container
           h3.text-center.mg-md Registrazione
-          p.text-center A little feature description could go here.
+          p.text-center Trasforma il segnale sonoro in segnale elettrico.
         .col-sm-4
           .text-center
             a(onclick="scrollToTarget('#Sampling')")
               img(src="images/sampling-icon.png").icon-xl.in-container
           h3.text-center.mg-md Campionamento
-          p.text-center A little feature description could go here.
+          p.text-center Traforma il segnale elettrico continuo in un segnale digitale.
         .col-sm-4
           .text-center
             a(onclick="scrollToTarget('#Reconstruction')")
               img(src="images/speaker.png").icon-xl.in-container
           h3.text-center.mg-md Ricostruzione
-          p.text-center A little feature description could go here.
+          p.text-center Trasforma il segnale digitale nuovamente in segnale elettrico continuo.
 
   .bloc.bgc-white.l-bloc#Recording
     .container.bloc-xl
       .row
         .col-sm-12
           h3.text-center.mg-lg REGISTRAZIONE
-          p.text-center La registrazione avviene tramite microfoni. I microfoni trasformano l'energia da una forma ad un'altra, nello specifico energia meccanica (delle onde sonore) in energia elettrica (il segnale elettrico che viene ricevuto da un altoparlante o da un convertitore #[span.explain(title="Analog-to-Digital Converter") ADC] per essere poi registrato su supporto digitale) tramite il fenomeno dell'induzione elettromagnetica, secondo la legge di Farady-Neumann-Lenz
-          .text-center
-            img(src="images/mic-dynamic.png").in-container
-          p.text-center Fai finta che questa sia una descrizione dell'immagine.
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim eros vel odio fermentum, ut luctus est consectetur. Proin volutpat scelerisque enim, id venenatis metus elementum vel. Nunc vel accumsan eros. Aenean eleifend diam ut felis congue dignissim. Donec nisl eros, suscipit ac neque sit amet, laoreet rutrum lacus. Nullam eget pretium nulla. Fusce a nibh eu ligula viverra maximus vel sit amet metus. Quisque eu est mauris. Curabitur pretium est vel ante eleifend sodales. Nullam et eros condimentum, tristique sem ut, mollis erat. Aliquam vulputate risus tincidunt, tincidunt purus in, placerat purus. Aenean nec mi enim. Morbi eu orci cursus, tristique magna nec, imperdiet ex. Curabitur viverra sem nisi, ac finibus ante dictum ut.
+          p.text-center La registrazione avviene tramite microfoni. I microfoni trasformano l'energia meccanica (delle onde sonore) in energia elettrica (il segnale elettrico che viene ricevuto da un altoparlante o da un convertitore Analogico-a-Digitale per essere poi registrato su supporto digitale).
+          .grid.grid-spaced
+            .grid-row
+              .grid-cell.text-center
+                img(src="images/mic-dynamic.png").in-container
+              .grid-cell.text-center
+                img(src="images/mic-condenser.png").in-container
+            .grid-row
+              .grid-cell
+                h3.text-center Microfono dinamico
+                p I microfoni dinamici funzionano grazie all'induzione elettromagnetica, muovendo un avvolgimento intorno ad un mangete permanente.
+              .grid-cell
+                h3.text-center Microfono a condensatore
+                p I microfoni a condensatore sfruttano la variazione di capacità di un condensatore al variare della distanza tra le armature.
 
   .bloc.d-bloc.bgc-outer-space#Sampling
     .container.bloc-lg
       .row
         .col-sm-12
           h3.text-center.mg-lg CAMPIONAMENTO
-          p.text-center Cose molto intelligenti qui. Magari con qualche formulone matematico che i commissari non capiscono.
-          p.text-center Formulone/i magggico/i
+          p.text-center Segnale continuo: varia costantemente nel tempo, quindi può essere misurato in qualsiasi istante.
+          p.text-center Segnale discreto: varia secondo dei valori minimi, quindi può essere misurato solo in certi istanti di tempo determinati.
+          p.text-center.space-bottom Campionamento: trasformazione di un segnale continuo in un segnale discreto, ottenuto misurando ad intervalli di tempo regolari il segnale.
           .text-center.mg-md
             img(src="images/sampling.png")
-          p.text-center Altra descrizione della foto. Che fa pure riferimento al/i formulone/i maggico/i
-          p.text-center Curiosità (che in realtà è uno dei punti focali della mia tesina, ma questi sono dettagli. Non ho tempo di scrivere dei contenuti decenti per oggi): si riescono a ricostruire perfettamente tutte le frequenze minori di f_s/2, dove f_s è la frequenza di campionamento.
-          p.text-center Nulla nec quam pharetra, suscipit nisl vitae, tempus velit. Sed vitae turpis non libero molestie interdum. Mauris ac sollicitudin ante. Curabitur egestas venenatis faucibus. Praesent consequat, quam laoreet accumsan pulvinar, ipsum turpis laoreet enim, at congue tortor lorem ac metus. Aenean porttitor metus sit amet massa lobortis faucibus. Duis varius mattis velit sed sagittis. Nullam nec nisl porttitor, volutpat sem eget, lobortis metus. Integer at dapibus lectus. Phasellus pretium odio et pharetra lacinia. Pellentesque eu nisl ornare, auctor mi at, egestas quam. Ut finibus et nisl eu convallis. Aenean accumsan ligula scelerisque nunc ultrices, consectetur iaculis lorem porta. Curabitur porttitor augue eget leo convallis tincidunt. 
+          p.text-center.space-bottom Esempio di capionamento
+          p.text-center L'intervallo di tempo ogni cui si effettua la misura si chiama periodo di campionamento. L'inverso del periodo di campionamento si chiama frequenza di campionamento.
+          //A voce: i computer (e gli strumenti digitali in generale) funzionano secondo i bit, che possono assumere valore 0 o 1, e quindi hanno un numero finito di stati. Per questo è impossibile memorizzare un segnale continuo in tutti i suoi infiniti istanti, ma è necessario campionarlo
 
   .bloc.bgc-white.l-bloc#Reconstruction
     .container.bloc-xl
       .row
         .col-sm-12
           h3.text-center.mg-lg RICOSTRUZIONE
-          p.text-center Teoricamente, una ricostruzione perfetta si può ottenere sommando le funzioni sinc centrate nei punti di campionamento e normalizzate al valore in quel punto. Questa interpolazione è perfetta, cioè a partire da un certo campionamento genera un'onda che, se campionata nuovamente alla stessa frequenza, genera gli stessi valori per il campionamento; una dimostrazione di questo fatto deriva dal teorema del campionamento di Nyquist–Shannon.
-          .text-center.mg-md
+          p.text-center Per riprodurre un suono, è necessario generare un segnale elettrico continuo che venga trasmesso agli altoparlanti. Bisogna quindi ricostruire il segnale continuo a partire dai valori campionati.
+          h4.text-center Teorema di Fourier
+          p.text-center Il teorema di Fourier dimostra che ogni suono può essere scomposto come somma di armoniche fondamentali, eventualmente in numero infinito, sommando armoniche di frequenze tutte diverse con ampiezze opportune.
+          p.text-center Quindi ogni suono di qualsiasi frequenza è formato da altri suoni (armonici, quindi uguali a quelli di un diapason) con frequenze pari o superiori alla sua frequenza.
+          h4.text-center Teorema del campionamento di Nyquist–Shannon
+          p.text-center.space-bottom Secondo questo teorema, per ottenere una ricostruzione perfetta delle frequenze minori o uguali di una certa frequenza fissata F, è necessario ma anche sufficiente campionare con una frequenza maggiore di 2F.
+
+          .space-bottom &nbsp;
+          p.text-center Combinando i risultati di questi due teoremi al fatto che l'orecchio umano percepisce i suoni con frequenze approsimativamente tra 20 e 20.000 Hz si ottiene che basta campionare ad una frequenza superiore a 40.000 Hz per registrare tutte le frequenze udibili da una persona, ottenendo così un suono uguale a quello originale per una persona.
+          //- Curiosità: la maggior parte delle persone non riesca a sentire frequenze superiori ai 16.000 Hz. Personalmente: fino ai 15.000 Hz bene, fino ai 18.000 Hz sento qualcosa
+          p.text-center Le frequenze di campionamento più comuni attualmente sono 8 kHz (telefoni), 44,1 kHz (audio CD), 48 kHz (film), 88,2 kHz (audio CD), 192 kHz (audio DVD, Blue-ray e HD DVD)
+
+          .space-bottom &nbsp;
+          //-p.text-center Teoricamente, una ricostruzione perfetta si può ottenere sommando delle funzioni sinc centrate nei punti di campionamento e normalizzate al valore in quel punto. Questa interpolazione è perfetta, cioè a partire da un certo campionamento genera un'onda che, se campionata nuovamente alla stessa frequenza, genera gli stessi valori per il campionamento; una dimostrazione di questo fatto deriva dal teorema del campionamento di Nyquist–Shannon.
+          //-.text-center.mg-md
             img(src="images/sinc-function.png").in-container
             p.text-center Grafico della funzione sinc, definita come sin(x)/x (non normalizzata) o come \frac{sin(\pi x)}{\pi x} (normalizzata)
-          p Un metodo matematicamente equivalente è la convoluzione di una funzione sinc con una serie di Delta di Dirac normalizzate e allineate ai valori campionati.
-          p Nessuno di questi due metodi viene però utilizzato perché, anche se garantirebbero una riscostruzione perfetta, è troppo dispendiosa a livello di calcoli da eseguire. Perciò viene utilizzata un'approssimazione con una funzione #[span.explain(title="Zero-order hold") ZOH] basata sui valori campionati, poi passata attraverso un "#[span.explain(title="filtro che ''fa passare'' solo le frequenze più basse") low-pass filter]" (chiamato anche "anti-imaging filter") per eliminare le frequenze troppo alte non volute
+          //-p Un metodo matematicamente equivalente è la convoluzione di una funzione sinc con una serie di Delta di Dirac normalizzate e allineate ai valori campionati.
+          p Nonostante siano noti dei metodi per effettuare questa ricostruzione perfettamente, questi non vengono utilizzati in pratica perché sono troppo complessi da eseguire. Perciò viene utilizzata un'approssimazione con una funzione Zero-order hold basata sui valori campionati. Viene poi utilizzato un filto passa basso (detto filtro anti-aliasing) per rimuovere le frequenze spurie generate dal rumore.
           .grid.text-center.mg-md
             .grid-row
               .grid-cell

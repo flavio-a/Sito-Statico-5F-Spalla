@@ -37,6 +37,9 @@ footer {
   padding-top: 6px;
 }
 
+.space-bottom{
+  margin-bottom: 5px;
+}
 
 /*
  Grid system
@@ -49,4 +52,8 @@ footer {
 }
 .grid-cell {
   display: table-cell;
+}
+
+.grid-spaced {
+  border-spacing: 2px;
 }
